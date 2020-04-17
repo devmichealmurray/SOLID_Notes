@@ -3,6 +3,10 @@
 
     <string name="note_title_hint">Your Note Title Here..</string>
     <string name="note_content_hint">Your Note Content Here..</string>
-    <string name="query_note">SELECT * FROM note WHERE id = :id</string>
+    <string name="query_note">SELECT * FROM note WHERE id = :arg0</string>
     <string name="query_all_notes">SELECT * FROM note</string>
+    <string name="title_placeholder">Title</string>
+    <string name="content_placeholder">Content</string>
+    <string name="last_updated_placeholder">Last Updated</string>
+    <string name="word_count_placeholder">Word Count Placeholder</string>
 </resources>

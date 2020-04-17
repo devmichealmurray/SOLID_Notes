@@ -5,17 +5,16 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
-import com.devmmurray.memorynotes.R
 
 @Dao
 interface NoteDao {
     @Insert(onConflict = REPLACE)
     suspend fun addNoteEntity(noteEntity: NoteEntity)
 
-    @Query(R.string.query_note.toString())
+    @Query("SELECT * FROM note WHERE id = :id")
     suspend fun getNoteEntity(id: Long): NoteEntity?
 
-    @Query(R.string.query_all_notes.toString())
+    @Query("SELECT * FROM note")
     suspend fun getAllNoteEntities(): List<NoteEntity>
 
     @Delete
